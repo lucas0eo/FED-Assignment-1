@@ -9,14 +9,31 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <style>
         /* Additional styles for the slider and images */
-        .Slide {
-            width:50%;
+        /* .Slide {
+            margin-left:4%;
+            float:left;
+            width:60%;
+        } */
+        .main-container{
+            position:relative;
+            left:10%;
+            width:80%;
+            display: flex; /* Use flexbox */
+            border:2px solid rgb(0,0,0,0);
+            background-color: rgb(0,0,0,0.5); 
         }
-
+        .small-container1{
+            width: 58%; /* Adjust width as needed, leaving some space for margins */ /* Optional padding for content inside the smaller containers */
+            box-sizing: border-box;
+        }
+        .small-container2{
+            margin-top:6px;
+            width:30%; /* Optional padding for content inside the smaller containers */
+            box-sizing: border-box;
+        }
         .slider-container {
             position: relative;
             width: 80%;
-            margin: auto;
             overflow: hidden;
         }
 
@@ -27,7 +44,7 @@
 
         .slide {
             min-width: 100%;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,19 +68,6 @@
             cursor: pointer;
         }
 
-        /* Styles for navigation arrows */
-        .slider-container .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            padding: 10px;
-        }
-
         .slider-container .prev {
             left: 10px;
         }
@@ -71,6 +75,129 @@
         .slider-container .next {
             right: 10px;
         }
+        .coverpage{
+            width:100%;
+            height:auto;
+        }
+        /* .coverpage-container{
+            margin-top:8px;
+            float:left;
+            width:30%;
+            height:auto;
+            background-color: rgb(0,0,0,0.5);
+        } */
+        .Paragraph{
+            font-family: pixelify sans;
+            /* color: rgb(162,228,184); */
+            color: rgb(203, 198, 198);
+
+        }
+        .Part1{
+            font-family: pixelify sans;
+            color: rgb(203, 198, 198);
+        }
+        .results{
+            font-family: pixelify sans;
+            color: rgb(97, 160, 255);
+        }
+        .team{
+            font-family: pixelify sans;
+            color: rgb(97, 160, 255);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .team:hover{
+            color: rgb(255, 255, 255);
+        }
+        .steam-review {
+            font-family: pixelify sans;
+            color: rgb(203, 198, 198);
+            background: rgb(0,0,0,0.5);
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            margin-left:125px;
+            padding: 20px;
+            width: 975px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-summary {
+            display: flex;
+        }
+
+        .review-summary img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .summary-details h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .rating {
+            color: #63a34a;
+            font-weight: bold;
+        }
+
+        .user-review {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .user-details img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            margin-top: 5px;
+        }
+
+        .username {
+            font-weight: bold;
+        }
+
+        .comment-text {
+            margin-bottom: 10px;
+        }
+
+        .timestamp {
+            color: #777;
+        }
+        .user-comment{
+            width:70%;
+        }
+
+    
+
     </style>
 </head>
 <body class="page2background">
@@ -87,25 +214,74 @@
     <div id="Title">
         <h1 class="GameTitle">Chronicles of Eldoria</h1>
     </div>
-    <div class="Slide">
-        <div class="slider-container">
-            <div class="slider-content">
-                <!-- Place your slides here -->
-                <div class="slide"><img src="images/Gameplay-gif.gif" alt="Slide 1"></div>
-                <div class="slide"><img src="images/gameplay 2.png" alt="Slide 2"></div>
-                <div class="slide"><img src="images/staticgollum.png" alt="Slide 3"></div>
+    <div class = "main-container">
+        <div class="small-container1">
+            <div class="slider-container">
+                <div class="slider-content">
+                    <!-- Place your slides here -->
+                    <div class="slide"><img src="images/Gameplay-gif.gif" alt="Slide 1"></div>
+                    <div class="slide"><img src="images/gameplay 2.png" alt="Slide 2"></div>
+                    <div class="slide"><img src="images/staticgollum.png" alt="Slide 3"></div>
+                </div>
+            </div>
+            <div class="image-row">
+                <!-- Add an image for each slide in the row below -->
+                <img src="images/Gameplay-gif.gif" alt="Thumbnail 1" onclick="goToSlide(0)">
+                <img src="images/gameplay 2.png" alt="Thumbnail 2" onclick="goToSlide(1)">
+                <img src="images/staticgollum.png" alt="Thumbnail 3" onclick="goToSlide(2)">
             </div>
         </div>
-        <div class="image-row">
-            <!-- Add an image for each slide in the row below -->
-            <img src="images/Gameplay-gif.gif" alt="Thumbnail 1" onclick="goToSlide(0)">
-            <img src="images/gameplay 2.png" alt="Thumbnail 2" onclick="goToSlide(1)">
-            <img src="images/staticgollum.png" alt="Thumbnail 3" onclick="goToSlide(2)">
+        <div class = "small-container2">
+            <img src = "images/coverpage.png" class = "coverpage">
+            <p class = "Paragraph">"Chronicles of Eldoria" unique mechanics and features create a rich, replayable narrative that evolves based on the player's decisions and the interactions between the four distinct factions.</p>
+            <p class="Part1 tooltip">
+                All Reviews: <span class="results">Positive(1347)</span>
+                <span class="tooltiptext">97% of the 1347 user reviews for this game are positive</span>
+            </p>
+            <p class = "Part1">Developer: <span class = "team">The Randoms</span></p>
         </div>
     </div>
-    <div class = "container">
-        <p>SUMMARY</p>
-    </div>
+    <!-- User review's -->
+    <section class="steam-review">
+        <div class="review-summary">
+            <div class="summary-details">
+                <h2>Chronicles of Eldoria</h2>
+                <p class="rating">Recent Reviews: Very Positive</p>
+            </div>
+        </div>
+        <div class="user-review">
+            <div class="user-details">
+                <img src="images/profilepicture1.jpg" alt="User 1 Avatar">
+                <div class="user-info">
+                    <p class="username">SteamUser123</p>
+                    <p class="playtime">Played for 231 hours</p>
+                </div>
+            </div>
+            <div class="user-comment">
+                <p class="comment-text">ABSOLUTE MASTERPIECE.<br>I really don't like 2D games but this one really took me. the music, sound effects, the variety of landscapes and enemies, everything about it was beautiful.</p>
+                <p class="timestamp">Posted 2 days ago</p>
+            </div>
+        </div>
+    </section>
+    <section class="steam-review">
+        <div class="review-summary">
+            <div class="summary-details">
+                <h2>Chronicles of Eldoria</h2>
+                <p class="rating">Recent Reviews: Very Positive</p>
+            </div>
+        </div>
+        <div class="user-review">
+            <div class="user-details">
+                <img src="images/profilepicture2.jpg" alt="User 1 Avatar">
+                <div class="user-info">
+                    <p class="username">SteamUser123</p>
+                    <p class="playtime">Played for 135 hours</p>
+                </div>
+            </div>
+            <div class="user-comment">
+                <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit....</p>
+                <p class="timestamp">Posted 1 month ago</p>
+            </div>
     <script src="script.js"></script>
 </body>
 </html>
