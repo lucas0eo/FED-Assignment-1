@@ -7,7 +7,7 @@
 } 
 .page2background{
     margin:0;
-    background-image: url("Background\ wall.png");
+    background-image: url("images/Background\ wall.png");
     background-size: cover; /* Scale the image to cover the entire container */
     background-position: center; /* Center the image horizontally and vertically */
     background-attachment: fixed; /* Keep the background fixed as the content scrolls */
