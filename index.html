@@ -1,131 +1,323 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>
-    body{
-      background:gray;
+    <meta charset="UTF-8" />
+    <title>The Four Kingdoms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Oswald:wght@300&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <!--<link href="style.css" rel="stylesheet" type="text/css"> -->
+  </head>
+<style>
+.navbar{
+	/*Header */
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index:1;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+	font-family: pixelify sans;
+  font-size:20px;
+	font-style: normal;
+	font-weight: 400;
+  width:100%;
+}
+.navbar nav{
+	/*Nav bar containing links in header */
+   z-index:2;
+	text-align: center;
+	width: 100%;
+	float: left;
+	color: rgb(187, 186, 186);
+}
+.navbar nav a{
+  z-index:2;
+  text-decoration: none;
+  text-align: center;
+  padding:12px;
+	float: left;
+	color: rgb(203, 198, 198);
+  width:18%;
+}
+.navbar .icon {
+    display: none;
+    color: rgb(187, 186, 186);
+    font-family: pixelify sans;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+
+} 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.container{
+  height:200vh;
+  position:relative;
+  overflow:hidden;
+}
+.top-image, .bottom-image, .bottom-image2, .bottom-image3 {
+  width: 100%;
+  height: 100vh;
+}
+.top-image {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("mountain\ thing\ \(3\).png"); 
+  background-size: cover;
+  background-position:center;
+}
+.bottom-image{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("mountain\ thing\ \(1\).png"); 
+  background-size: cover;
+  background-position:center;
+} 
+.bottom-image2{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("mageupdated\ \(1\).png"); 
+  background-size: cover;
+  background-position:center;
+} 
+.bottom-image3{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("phantombackground.png"); 
+  background-size: cover;
+  background-position:center;
+} 
+#Title{
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+	float: left;
+} 
+@keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
     }
-		.container {
-			display: flex;
-			width: 100%;
-			background-color: #fff;
-			flex-wrap: wrap;
-			/*wrap flex items to a new row if not enough space */
+#FourKingdoms{
+    margin-top:200px;
+    text-align:right;
+    justify-content: center;
+    width:85%; 
+    font-family: pixelify sans;
+	  color: rgb(203, 198, 198);
+    font-size:50px;
+    animation: slideIn 1s ease-out;
+}
 
-		}
+.navbar nav a:hover{
+	color: rgb(242, 255, 192);
+}
+ #home{
+	color: rgb(242, 255, 192);
+} 
+.navbar nav a.active{
+    color: rgb(242, 255, 192);
+}
+.img-container2{
+    position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 290px;
+  left: 160px;
+}
+.overlay2 {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    margin-left: 450px;
+    background-color: rgba(0, 0, 0,0.5); /* Adjust the background color and opacity as needed */
+    display:flex;
+    align-items: center;
+    opacity:0;
+    border:2px solid white;
+    overflow:hidden;
+}
+.overlay:hover + .overlay2 {
+    opacity:1;
+}
+ .overlay:hover{
+    transform: scale(1.1);
+} 
+.text{
+    text-align: center;
+    color: rgb(187, 186, 186);
+    font-family: pixelify sans;
+}
+.text .header{
+    text-decoration: underline;
+    font-size:20px;
+}
+.Title{
+    position:absolute;
+    top:5%;
+    left:40%;
+    text-align: center;
+    color: rgb(187, 186, 186);
+    font-family: pixelify sans;
+} 
+.img-container3{
+    position:relative;
+}
+.wizardoverlay {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+.wizardoverlay2{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    margin-left: 600px;
+    background-color: rgba(0, 0, 0,0.7); /* Adjust the background color and opacity as needed */
+    display:flex;
+    align-items: center;
+    opacity:0;
+    border:2px solid white;
+    overflow:hidden;
+}
+.wizardoverlay:hover{
+    transform:scale(1.1);
+}
+.wizardoverlay:hover + .wizardoverlay2 {
+    opacity:1;
+}
+.img-container4{
+  position:relative;
+}
 
-		/* flex item of 20% per item */
-		.flex-item {
-			padding: 2%;
-			flex-grow: 1;
-			flex-basis: 15%;
-			/* 15% for borders*/
-
-			display: flex;
-			flex-direction: column;
-			/* so child elements can use flexbox stuff too! */
-			/* switching on borders will force the 5th flex item to move down*/
-			border: 1px solid #D3D3D3;
-
-
-			/* let's set random images if we want to create cover images */
-			/*
-      background-image: url("https://picsum.photos/400/400");
-      background-size: cover;
-      */
-		}
-
-		.flex-img img {
-			max-width: 100%;
-		}
-
-		.flex-info {
-			margin-top: auto;
-		}
-
-		@media (max-width: 920px) {
-			.flex-item {
-				flex: 1 21%;
-			}
-        @media screen and (max-width: 576px){
-            .flex-item{
-                display:flex;
-                flex:45%;
-                flex-grow: 0;
-
-            }
-        }
-      /* This is a flex shorthand */
-      /* we set 
-        flex-grow: 1; 
-        flex-basis: 21%;
-        Flex shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-        Understand flex grow: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
-      */
-		}
-
-    img{
-      width: 400px;
+@media screen and (max-width:769px) {
+    .navbar nav a{
+        display:none;
     }
-
-
-	</style>
+     .top-image{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("mobile\ background\ 2.png"); 
+    }  
+    .bottom-image{
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("warrior\ background.png"); 
+    }
+    .Title{
+        top:0%;
+        left:20%;
+    }
+    .overlay{
+        top:31%;
+        left:5px;
+    }
+    .overlay2{
+        width:90%;
+        right:5%;
+        top:10%;
+    }
+    .wizardoverlay2{
+        width:90%;
+        right:5%;
+        top:10%;   
+    }
+    .navbar .icon{
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {position: absolute;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    #FourKingdoms{
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .navbar a{
+        font-size:15px
+    }
+  }
+/* Position text in the middle of the page/image */
+</style>
 </head>
-
 <body>
-	<section class="container">
-		<div class="flex-item">
-			<div class="flex-img">
-				<img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-       <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-     <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-    <div class="flex-item">
-      <div class="flex-img">
-        <img src="https://picsum.photos/400/400">
-      </div>
-      <div class="flex-info">
-        <h4>Some info</h4>
-        <p>Some meaningful info</p>
-      </div>
-		</div>
-	</section>
-
-
+<div class = "container">
+  <div id = "Title">
+    <h1 id = "FourKingdoms">Chronicles of Eldoria</h1>
+  </div> 
+  <div id = "img-container" id = "image1">
+    <div class="top-image"></div>
+  </div>
+  <div class = "img-container2" id = "image2">
+    <div class="bottom-image"></div>
+        <div class = "overlay">
+            <img src = "staticwarrior.png" height = "250" width = "250">  
+        </div>
+        <div class = "overlay2">
+            <div class = "image">
+                <img src = "warrior.gif" height = "150" width = "150">
+            </div>
+            <div class = "text">
+                <p><span class = "header"><b>Warrior</b></span><br><p id = "animated-text">Warriors engage in frontline battles to showcase martial prowess, while the Valorian King aspires to unite Eldoria under a powerful empire. This warrior is on a special journey to retrieve a sword hidden in the mountains.</p></p>  
+            </div> 
+        </div> 
+        <div class = "Title">
+            <h1>A Warrior's Journey</h1>
+        </div> 
+    </div>
+  </div>
+  <div class = "img-container3">
+    <div class="bottom-image2">
+        <div class = "wizardoverlay">
+            <img src = "staticwizard.png" height = "250" width = "250">  
+        </div>
+        <div class = "wizardoverlay2">
+            <div class = "image">
+                <img src = "wizard.gif" height = "150" width = "150">
+            </div>
+            <div class = "text">
+                <p><span class = "header"><b>Wizard</b></span><br><p id = "animated-text"> Wizards in Eldorium have arcane intrigue, and pursuit of wisdom, led by the Archmage who envisions a world where magic reigns supreme. This wizard is a dwarf hence his size and seems to be making something in the cauldron. </p></p>  
+            </div> 
+        </div>
+        <div class = "Title">
+            <h1>A  Wizard's Library</h1>
+        </div> 
+    </div>
+  </div>
+  <div class = "img-container2" id = "image2">
+    <div class="bottom-image3">
+        <div class = "overlay">
+            <img src = "staticphantom.png" height = "250" width = "250">  
+        </div>
+        <div class = "overlay2">
+            <div class = "image">
+                <img src = "phantom.gif" height = "150" width = "150">
+            </div>
+            <div class = "text">
+                <p><span class = "header"><b>Phantom</b></span><br><p id = "animated-text">Warriors engage in frontline battles to showcase martial prowess, while the Valorian King aspires to unite Eldoria under a powerful empire. This warrior is on a special journey to retrieve a sword hidden in the mountains.</p></p>  
+            </div> 
+        </div> 
+        <div class = "Title">
+            <h1>A Phantom's home</h1>
+        </div> 
+    </div>
+  </div>
+  <div class = "navbar" id = "mynavbar">
+      <nav><a href="Assesment1page3.html">Features</a>
+      <a href="#" id = "class"  onclick="scrollToImage('image2',event)">Classes</a>
+      <a href="#" id = "home" onclick="scrollToImage('image1', event);">Home</a>
+      <a href="Assesment1page4.html">About us</a>
+      <a href="DownloadsPage.html">Download</a></nav>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      <!-- <div class = "container"> -->
+  </div> 
+</div>
+<script src = "script.js"></script>
 </body>
-
-</html>

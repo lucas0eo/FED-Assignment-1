@@ -1,0 +1,214 @@
+ .page1background{
+    margin:0;
+    background-image: url('mountain\ thing.png');
+    background-size: cover; /* Scale the image to cover the entire container */
+    background-position: center;  /*Center the image horizontally and vertically*/ 
+    background-attachment: fixed;  /*Keep the background fixed as the content scrolls */
+} 
+.page2background{
+    margin:0;
+    background-image: url("Background\ wall.png");
+    background-size: cover; /* Scale the image to cover the entire container */
+    background-position: center; /* Center the image horizontally and vertically */
+    background-attachment: fixed; /* Keep the background fixed as the content scrolls */
+}
+.navbar{
+	/*Header */
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+	font-family: pixelify sans;
+    font-size:20px;
+	font-style: normal;
+	font-weight: 400;
+}
+.navbar nav{
+	/*Nav bar containing links in header */
+	text-align: center;
+	width: 100%;
+	float: left;
+	color: rgb(187, 186, 186);
+}
+.navbar nav a{
+    text-decoration: none;
+    text-align: center;
+    padding:12px;
+	float: left;
+	color: rgb(203, 198, 198);
+    width:18%;
+}
+.navbar nav a:hover{
+	color: rgb(242, 255, 192);
+}
+.navbar .icon {
+    display: none;
+    color: rgb(187, 186, 186);
+    font-family: pixelify sans;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+
+} 
+#Title{
+    text-align: center;
+	width: 100%;
+    justify-content: center;
+	float: left;
+
+} 
+#FourKingdoms{
+    margin-top:150px;
+    text-align:right;
+    justify-content: center;
+    width:85%; 
+    font-family: pixelify sans;
+	color: rgb(203, 198, 198);
+    font-size:50px;
+}
+.navbar .page{
+	color: rgb(242, 255, 192);
+}
+
+.gameplay-container{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    border:2px solid rgb(0,0,0,0);
+} 
+.GameTitle{
+    margin-left:10%;
+    text-align: left;
+    width: 90%;
+    justify-content: center;
+    font-family: pixelify sans;
+    color: rgb(203, 198, 198);
+}
+
+
+
+
+
+
+
+@media (max-width: 920px) {
+    .flex-item {
+        flex: 1 21%;
+    }
+    @media screen and (max-width: 576px){
+        .flex-item{
+            display:flex;
+            flex:45%;
+            flex-grow: 0;
+
+        }
+    }
+}
+@media screen and (max-width:769px) {
+    .navbar nav a{
+        display:none;
+    }
+     .page1background{
+        background-image: url('mobile background.png');
+    }  
+    #FourKingdoms{
+        width:90%
+    }
+    .BigContainer{
+        flex-direction: column;
+    }
+    .navbar .icon{
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    #FourKingdoms{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .Gameplay{
+        padding-top: 0px;
+    }
+    .word{
+        font-size:15px
+    }
+
+}
+@media screen and (max-width:576px) {
+    .navbar nav a{
+        font-size:16px;
+        width:15%;
+    }
+}
+@media (max-width: 920px) {
+    .flex-item {
+        flex: 1 21%;
+    }
+    @media screen and (max-width: 576px){
+        .flex-item{
+            display:flex;
+            flex:45%;
+            flex-grow: 0;
+            width:30%;
+        }
+    }
+}
+.slider-container {
+    position: relative;
+    width: 80%;
+    text-align: center;
+    margin:auto;
+    overflow: hidden;
+}
+
+/* Styling for the slider content */
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Styling for individual slides */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the images within the slides */
+.slide img {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Styling for the row of images below the slider */
+.image-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for individual images in the row */
+.image-row img {
+    width: 50px; /* Adjust the size as needed */
+    margin: 0 5px;
+    cursor: pointer;
+}
+.Sliders{
+    width:70%;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>The Four Kingdoms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Oswald:wght@300&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Additional styles for the slider and images */
+        .Slide {
+            width:50%;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-row {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-row img {
+            width: 50px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        /* Styles for navigation arrows */
+        .slider-container .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+        }
+
+        .slider-container .prev {
+            left: 10px;
+        }
+
+        .slider-container .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="page2background">
+    <div class="navbar" id="mynavbar">
+        <nav>
+            <a href="Assesment1page3.html">Features</a>
+            <a href="index.html#image2">Classes</a>
+            <a href="index.html">Home</a>
+            <a href="Assesment1page4.html">About us</a>
+            <a href="DownloadsPage.html" class="page">Download</a>
+        </nav>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <div id="Title">
+        <h1 class="GameTitle">Chronicles of Eldoria</h1>
+    </div>
+    <div class="Slide">
+        <div class="slider-container">
+            <div class="slider-content">
+                <!-- Place your slides here -->
+                <div class="slide"><img src="Gameplay-gif.gif" alt="Slide 1"></div>
+                <div class="slide"><img src="gameplay 2.png" alt="Slide 2"></div>
+                <div class="slide"><img src="staticgollum.png" alt="Slide 3"></div>
+            </div>
+        </div>
+        <div class="image-row">
+            <!-- Add an image for each slide in the row below -->
+            <img src="Gameplay-gif.gif" alt="Thumbnail 1" onclick="goToSlide(0)">
+            <img src="gameplay 2.png" alt="Thumbnail 2" onclick="goToSlide(1)">
+            <img src="staticgollum.png" alt="Thumbnail 3" onclick="goToSlide(2)">
+        </div>
+    </div>
+    <div class = "container">
+        <p>SUMMARY</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
