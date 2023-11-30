@@ -83,26 +83,198 @@
     font-family: pixelify sans;
     color: rgb(203, 198, 198);
 }
-
-
-
-
-
-
-
-@media (max-width: 920px) {
-    .flex-item {
-        flex: 1 21%;
-    }
-    @media screen and (max-width: 576px){
-        .flex-item{
-            display:flex;
-            flex:45%;
-            flex-grow: 0;
-
-        }
-    }
+.main-container{
+    position:relative;
+    left:10%;
+    width:80%;
+    display: flex; /* Use flexbox */
+    border:2px solid rgb(0,0,0,0);
+    background-color: rgb(0,0,0,0.5); 
 }
+.small-container1{
+    width: 58%; /* Adjust width as needed, leaving some space for margins */ /* Optional padding for content inside the smaller containers */
+    box-sizing: border-box;
+}
+.small-container2{
+    margin-top:6px;
+    width:30%; /* Optional padding for content inside the smaller containers */
+    box-sizing: border-box;
+}
+.slider-container {
+    left:50px;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    /* box-sizing: border-box; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-row img {
+    width: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-container .prev {
+    left: 10px;
+}
+
+.slider-container .next {
+    right: 10px;
+}
+.coverpage{
+    width:100%;
+    height:auto;
+}
+/* .coverpage-container{
+    margin-top:8px;
+    float:left;
+    width:30%;
+    height:auto;
+    background-color: rgb(0,0,0,0.5);
+} */
+.Paragraph{
+    font-family: pixelify sans;
+    /* color: rgb(162,228,184); */
+    color: rgb(203, 198, 198);
+
+}
+.Part1{
+    font-family: pixelify sans;
+    color: rgb(203, 198, 198);
+}
+.results{
+    font-family: pixelify sans;
+    color: rgb(97, 160, 255);
+}
+.team{
+    font-family: pixelify sans;
+    color: rgb(97, 160, 255);
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.team:hover{
+    color: rgb(255, 255, 255);
+}
+.steam-review {
+    font-family: pixelify sans;
+    color: rgb(203, 198, 198);
+    background: rgb(0,0,0,0.5);
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    margin-left:125px;
+    padding: 20px;
+    width: 975px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-summary {
+    display: flex;
+}
+
+.review-summary img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.summary-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.rating {
+    color: #63a34a;
+    font-weight: bold;
+}
+.Badrating{
+    color:rgb(221, 90, 90);
+    font-weight:bold;
+}
+
+.user-review {
+    display: flex;
+    margin-top: 20px;
+}
+
+.user-details img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.user-info {
+    margin-top: 5px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.comment-text {
+    margin-bottom: 10px;
+}
+
+.timestamp {
+    color: #777;
+}
+.user-comment{
+    width:70%;
+}
+
+
+
+
+
+
 @media screen and (max-width:769px) {
     .navbar nav a{
         display:none;
@@ -144,6 +316,39 @@
     .word{
         font-size:15px
     }
+    .main-container {
+        flex-direction: column;
+        left: 0;
+        width: 99%;
+    }
+
+    .small-container1,
+    .small-container2 {
+        width: 100%;
+    }
+
+    .slider-container {
+        left:0px;
+        width: 100%;
+    }
+
+    .slider-content {
+        width: 100%; /* Adjust based on the number of slides */
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .image-row img {
+        width: 30px;
+        margin: 0 3px;
+    }
+    
+    .steam-review {
+        margin-left: 0;
+        width: 85%;
+    }
 
 }
 @media screen and (max-width:576px) {
@@ -151,64 +356,4 @@
         font-size:16px;
         width:15%;
     }
-}
-@media (max-width: 920px) {
-    .flex-item {
-        flex: 1 21%;
-    }
-    @media screen and (max-width: 576px){
-        .flex-item{
-            display:flex;
-            flex:45%;
-            flex-grow: 0;
-            width:30%;
-        }
-    }
-}
-.slider-container {
-    position: relative;
-    width: 80%;
-    text-align: center;
-    margin:auto;
-    overflow: hidden;
-}
-
-/* Styling for the slider content */
-.slider-content {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Styling for individual slides */
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styling for the images within the slides */
-.slide img {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-}
-
-/* Styling for the row of images below the slider */
-.image-row {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styling for individual images in the row */
-.image-row img {
-    width: 50px; /* Adjust the size as needed */
-    margin: 0 5px;
-    cursor: pointer;
-}
-.Sliders{
-    width:70%;
 }
