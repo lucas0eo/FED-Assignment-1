@@ -195,6 +195,9 @@
     visibility: visible;
     opacity: 1;
 }
+.team{
+    text-decoration: none;
+}
 .team:hover{
     color: rgb(255, 255, 255);
 }
@@ -352,7 +355,40 @@
 .Feature3 .word {
     flex-grow: 1; /* Allows the text to take remaining space */
 }
+.Big{
+    text-align: center;
+}
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding:20px;
+    background-color: rgb(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.About-us{
+    text-align: center;
+}
+.Container1 {
+    float:left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.Container2{
+    text-align: center;
+    margin-bottom: 40px;
+}
 
+.Container1 img, .Container2 img {
+    width: 100%;
+    max-width: 150px;
+    height:auto;
+}
+
+.person-info {
+    border:2px solid rgb(0,0,0,0);
+    margin-top: 20px;
+}
 
 
 @media screen and (max-width:769px) {

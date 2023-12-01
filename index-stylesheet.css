@@ -1,6 +1,7 @@
+
 .navbar{
 	/*Header */
-  position:fixed;
+  position:absolute;
   top: 0;
   left: 0;
   z-index:1;
@@ -42,9 +43,13 @@ body, html {
   height: 100%;
   margin: 0;
 }
+.MainContainer{
+    overflow:hidden;
+}
 .top-image, .bottom-image, .bottom-image2, .bottom-image3 {
   width: 100%;
   height: 100vh;
+  width:100vw;
 }
 .top-image {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("images/mountain\ thing\ \(3\).png"); 
@@ -67,12 +72,12 @@ body, html {
   background-position:center;
   width:100%;
 } 
-#Title{
+ #Title{
   text-align: center;
   width: 100%;
   justify-content: center;
 	float: left;
-} 
+}  
  @keyframes slideIn {
       from {
         transform: translateX(-100%);
@@ -81,7 +86,7 @@ body, html {
         transform: translateX(0%);
       }
     } 
-#FourKingdoms{
+ #FourKingdoms{
     margin-top:200px;
     text-align:right;
     justify-content: center;
@@ -101,26 +106,26 @@ body, html {
 .navbar nav a.active{
     color: rgb(242, 255, 192);
 }
-.img-container2{
+ .img-container2{
     position: relative;
 }
 .overlay {
   position: absolute;
   top: 290px;
   left: 160px;
-}
-.overlay2 {
+} 
+ .overlay2 {
     position: absolute;
     top: 20%;
     right: 30%;
-    margin-left: 450px;
+    margin-left: 450px; 
     background-color: rgba(0, 0, 0,0.5); /* Adjust the background color and opacity as needed */
     display:flex;
     align-items: center;
     opacity:0;
     border:2px solid white;
     overflow:hidden;
-}
+} 
 .overlay:hover + .overlay2 {
     opacity:1;
 }
@@ -143,7 +148,7 @@ body, html {
     text-align: center;
     color: rgb(187, 186, 186);
     font-family: pixelify sans;
-} 
+}  
 .img-container3{
     position:relative;
 }
@@ -155,8 +160,8 @@ body, html {
 .wizardoverlay2{
     position: absolute;
     top: 20%;
-    right: 10%;
-    margin-left: 600px;
+    right: 40%;
+    margin-left: 600px; 
     background-color: rgba(0, 0, 0,0.7); /* Adjust the background color and opacity as needed */
     display:flex;
     align-items: center;
@@ -182,12 +187,12 @@ body, html {
     position: absolute;
     top: 20%;
     right: 40%;
-    margin-left: 300px;
+    margin-left: 300px; 
     background-color: rgba(0, 0, 0,0.7); /* Adjust the background color and opacity as needed */
     display:flex;
     align-items: center;
     opacity:0;
-    border:2px solid white;
+    border:2px solid rgb(255, 255, 255);
     overflow:hidden;
 }
 .phantomoverlay:hover{
@@ -196,9 +201,7 @@ body, html {
 .phantomoverlay:hover + .phantomoverlay2 {
     opacity:1;
 }
-.body{
-    border:2px solid red;
-}
+
 
 @media screen and (max-width:769px) {
       @keyframes slideIn {
@@ -220,13 +223,13 @@ body, html {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("images/warrior\ background.png"); 
     }
     .bottom-image3{
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("images/mobile-phantom.png"); 
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("images/mobile-phantom.png");  
 
     }
     .Title{
         top:0%;
         left:20%;
-    }
+    } 
     .overlay{
         top:31%;
         left:5px;
@@ -250,7 +253,7 @@ body, html {
         float: right;
         display: block;
     }
-    /* .navbar.responsive {position: relative;} */
+    .navbar.responsive {position: absolute;} 
     .navbar.responsive .icon {
       position: absolute; 
       right: 0;
@@ -260,8 +263,8 @@ body, html {
         display: block;
         float: none;
         text-align: left;
-    }
-    #FourKingdoms{
+    } 
+     #FourKingdoms{
         position: absolute;
         top: 5%;
         left: 50%;
@@ -270,5 +273,5 @@ body, html {
     }
     .navbar a{
         font-size:15px
-    }
-  }
+    } 
+  } 
