@@ -1,12 +1,12 @@
 //Toggles the hamburger menu
-function myFunction() {
-    var x = document.getElementById("mynavbar");
-    if (x.className === "navbar") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbar";
-    }
-  }
+ function myFunction() {
+     var x = document.getElementById("mynavbar");
+     if (x.className === "navbar") {
+       x.className += " responsive";
+     } else {
+       x.className = "navbar";
+     }
+   }
 
 //Scrolls to home page and class page smoothly when clicking on the nav bar
 function scrollToImage(imageId, event) {

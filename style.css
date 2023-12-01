@@ -1,16 +1,12 @@
- .page1background{
-    margin:0;
-    background-image: url('mountain\ thing.png');
-    background-size: cover; /* Scale the image to cover the entire container */
-    background-position: center;  /*Center the image horizontally and vertically*/ 
-    background-attachment: fixed;  /*Keep the background fixed as the content scrolls */
-} 
+
 .page2background{
     margin:0;
     background-image: url("images/Background\ wall.png");
     background-size: cover; /* Scale the image to cover the entire container */
     background-position: center; /* Center the image horizontally and vertically */
     background-attachment: fixed; /* Keep the background fixed as the content scrolls */
+    color: rgb(187, 186, 186);
+    font-family: pixelify sans;
 }
 .navbar{
 	/*Header */
@@ -40,6 +36,7 @@
 .navbar nav a:hover{
 	color: rgb(242, 255, 192);
 }
+/* Hamburger icon */
 .navbar .icon {
     display: none;
     color: rgb(187, 186, 186);
@@ -49,13 +46,16 @@
     padding: 14px 16px;
 
 } 
+/*box that contains the Title "Chronicles of Eldoria"*/
 #Title{
-    text-align: center;
-	width: 100%;
-    justify-content: center;
-	float: left;
+    position:relative;
+    left:10%;
+    width:1015px;
+    display: flex; 
+    background: rgb(0,0,0,0.5);
 
 } 
+/* Title's position and style */
 #FourKingdoms{
     margin-top:150px;
     text-align:right;
@@ -119,7 +119,7 @@
     justify-content: center;
     align-items: center;
 }
-
+/* Each images on the slider */
 .slide img {
     max-width: 100%;
     height: auto;
@@ -149,19 +149,13 @@
     width:100%;
     height:auto;
 }
-/* .coverpage-container{
-    margin-top:8px;
-    float:left;
-    width:30%;
-    height:auto;
-    background-color: rgb(0,0,0,0.5);
-} */
+/* Desciption of game at download page */
 .Paragraph{
     font-family: pixelify sans;
-    /* color: rgb(162,228,184); */
     color: rgb(203, 198, 198);
 
 }
+/* "All reviews" and "Developer" styling */
 .Part1{
     font-family: pixelify sans;
     color: rgb(203, 198, 198);
@@ -174,11 +168,12 @@
     font-family: pixelify sans;
     color: rgb(97, 160, 255);
 }
+/* Position of box that appears when you hover over the reviews */
 .tooltip {
     position: relative;
     display: inline-block;
 }
-
+/* The styling of the box that appears when you hover over the reviews */
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
@@ -203,6 +198,7 @@
 .team:hover{
     color: rgb(255, 255, 255);
 }
+/* Styling for all user reviews */
 .steam-review {
     font-family: pixelify sans;
     color: rgb(203, 198, 198);
@@ -269,29 +265,119 @@
 .user-comment{
     width:70%;
 }
+/* Background of download bar */
+.Download {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    font-family: pixelify sans;
+    color: rgb(203, 198, 198);
+    width: 1015px;
+    margin-top: 50px;
+    margin-left: 125px;
+    background-image: linear-gradient(to right, #505050, #999999);
+    border-radius: 10px;
+    margin-bottom: 50px;
+    position: relative; /* Added position relative for absolute positioning */
+}
 
+/* Box that contains the "Download kingdoms of eldoria" text */
+.box {
+    padding: 20px;
+}
 
+/* Position of "Download kingdoms of eldoria" text */
+.DownloadText {
+    float: left;
+    text-align: left;
+    font-size: 20px;
+}
 
+/* Style of download button */
+.download-button {
+    position: absolute; /* Changed to absolute positioning */
+    top: 30%; /* Center vertically */
+    right: 10px; /* Adjust right spacing */
+    background-color: #1b2838;
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #30475e;
+}
+  .download-button:hover {
+    background-color: #30475e;
+  }
+  .Feature2 {
+    border:1px solid white;
+    margin:20px;
+    background-color: rgb(0,0,0,0.5);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the order of flex items */
+    align-items: center; /* Aligns items vertically in the center */
+    text-align: right; /* Aligns text to the left */
+}
+
+.Feature2 .gameplay2 {
+    max-width: 50%; /* Adjust the width of the image as needed */
+    margin-right: 20px; /* Adjust the margin between the image and text */
+}
+
+.Feature2 .word {
+    flex-grow: 1; /* Allows the text to take remaining space */
+}
+.Feature1,
+.Feature3 {
+    border:1px solid white;
+    background-color: rgb(0,0,0,0.5);
+    margin:20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.Feature1 .gameplay,
+.Feature3 .gameplay {
+    max-width: 50%; /* Adjust the width of the image as needed */
+    margin-right: 20px; /* Adjust the margin between the image and text */
+}
+
+.Feature1 .word,
+.Feature3 .word {
+    flex-grow: 1; /* Allows the text to take remaining space */
+}
 
 
 
 @media screen and (max-width:769px) {
-    .navbar nav a{
-        display:none;
+    #Title{
+        /* Removes the gap on left of Title in download page when in mobile view */
+        left:0%;
+        width:100%;
     }
-     .page1background{
-        background-image: url('mobile background.png');
-    }  
-    #FourKingdoms{
-        width:90%
+    .Download{
+        margin-left: 0px;
+        width:100%
+    }
+    .navbar nav a{
+        /* Removes all navabr headers*/
+        display:none;
     }
     .BigContainer{
         flex-direction: column;
     }
     .navbar .icon{
+        /* Shows icon on right of navbar when in mobile view */
         float: right;
         display: block;
     }
+    /* Styles the navbar into a hamburger menu */
     .navbar.responsive {position: relative;}
     .navbar.responsive .icon {
       position: absolute;
@@ -302,13 +388,6 @@
         display: block;
         float: none;
         text-align: left;
-    }
-    #FourKingdoms{
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
     }
     .Gameplay{
         padding-top: 0px;
@@ -348,6 +427,19 @@
     .steam-review {
         margin-left: 0;
         width: 85%;
+    }
+    .Feature1,
+    .Feature2,
+    .Feature3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gameplay,
+    .gameplay2,
+    .word {
+        text-align: center;
+        max-width: 80%;
     }
 
 }
