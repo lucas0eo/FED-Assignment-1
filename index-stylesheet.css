@@ -160,8 +160,8 @@ body, html {
 .wizardoverlay2{
     position: absolute;
     top: 20%;
-    right: 40%;
-    margin-left: 600px; 
+    right: 30%;
+    margin-left: 400px; 
     background-color: rgba(0, 0, 0,0.7); /* Adjust the background color and opacity as needed */
     display:flex;
     align-items: center;
@@ -244,10 +244,14 @@ body, html {
         right:5%;
         top:10%;   
     }
+    .phantomoverlay{
+        left:5%;
+        top:60%;
+    }
     .phantomoverlay2{
         width:90%;
         right:5%;
-        top:10%;
+        top:20%;
     }
     .navbar .icon{
         float: right;
