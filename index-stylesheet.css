@@ -227,8 +227,20 @@ body, html {
 .alchemistoverlay:hover + .alchemistoverlay2 {
     opacity:1;
 }
-  
-
+/* Scroll to top button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    color: rgb(215, 215, 215);
+    font-family: pixelify sans;
+    background-color: rgb(48,123,204,0.7);
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor:pointer; 
+}
 @media screen and (max-width:769px) {
       @keyframes slideIn {
         from {

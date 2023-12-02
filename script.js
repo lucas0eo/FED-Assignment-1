@@ -39,3 +39,26 @@ function updateSlider() {
     const newTransformValue = -currentSlide * 100 + '%';
     document.querySelector('.slider-content').style.transform = 'translateX(' + newTransformValue + ')';
 }
+// Function to show/hide the scroll-to-top button based on scroll position
+window.onscroll = function() {
+    showScrollToTopButton();
+};
+
+function showScrollToTopButton() {
+var button = document.getElementById("scrollToTopBtn");
+
+// Show the button when the scroll position is past the first image
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    button.style.display = "block";
+} else {
+    button.style.display = "none";
+}
+}
+
+// Function to smoothly scroll to the top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
