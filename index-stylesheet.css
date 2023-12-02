@@ -79,25 +79,25 @@ body, html {
   text-align: center;
   width: 100%;
   justify-content: center;
-	float: left;
+  float: left;
 }  
- @keyframes slideIn {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0%);
-      }
-    } 
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start opacity */
+    }
+    to {
+        opacity: 1; /* End opacity */
+    }
+}
  #FourKingdoms{
     margin-top:200px;
     text-align:right;
     justify-content: center;
     width:85%; 
     font-family: pixelify sans;
-	  color: rgb(203, 198, 198);
+	color: rgb(203, 198, 198);
     font-size:50px;
-    animation: slideIn 1s ease-out;
+    animation: fadeIn 2s ease-out;
 }
 
 .navbar nav a:hover{
@@ -183,7 +183,7 @@ body, html {
 }
 .phantomoverlay{
     position: absolute;
-    top: 20%;
+    top: 50%;
     right:20%;
 }
 .phantomoverlay2{
@@ -241,6 +241,22 @@ body, html {
     border-radius: 5px;
     cursor:pointer; 
 }
+.Footer{
+    border:2px solid rgb(0,0,0,0);
+    text-align: center;
+    background-color: #333;
+}
+.Footer p{
+    color: rgb(215, 215, 215);
+    font-family: pixelify sans;
+    background-color: #333;
+}
+a{
+    color: rgb(215, 215, 215);
+}
+a:hover{
+    color: white;
+}
 @media screen and (max-width:769px) {
       @keyframes slideIn {
         from {
@@ -253,6 +269,9 @@ body, html {
 
     .navbar nav a{
         display:none;
+    }
+    .Footer p{
+        width:70%
     }
      .top-image{
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1)), url("images/mobile\ background\ 2.png"); 
