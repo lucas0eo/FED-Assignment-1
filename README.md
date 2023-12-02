@@ -6,15 +6,15 @@ The design process firstly included the draft of the wifreframe. However, I scra
 
 ## Features
 Existing Features
-Feature 1 - Hamburger menu
+1. Feature 1 - Hamburger menu
 Allows users to toggle the hamburger menu it is default and dropdown state
-Feature 2 - Image sliders
+2. Feature 2 - Image sliders
 Allows users to scroll and select image in the image slider
 
 
 
 ## Credits
-Content
+1. Content
 came with myself, the code had help from chatgpt
-Media
+2. Media
 All photos were orginal except for the profile pictures used
