@@ -190,7 +190,7 @@
     opacity: 0;
     transition: opacity 0.3s;
 }
-
+/* When on hover, the tooltip(box) is shown */
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -210,7 +210,7 @@
     margin-top: 20px;
     margin-left:125px;
     padding: 20px;
-    width: 975px;
+    width:100%;
     display: flex;
     flex-direction: column;
 }
@@ -291,6 +291,7 @@
 
 /* Position of "Download kingdoms of eldoria" text */
 .DownloadText {
+    color: rgb(203, 198, 198);
     float: left;
     text-align: left;
     font-size: 20px;
@@ -298,10 +299,11 @@
 
 /* Style of download button */
 .download-button {
-    position: absolute; /* Changed to absolute positioning */
-    top: 30%; /* Center vertically */
-    right: 10px; /* Adjust right spacing */
-    background-color: #1b2838;
+    position: absolute; 
+    top: 30%; 
+    right: 10px; 
+    background-color: #4aa84b;
+    /* background-color: #1b2838; */
     color: #ffffff;
     padding: 15px 30px;
     border-radius: 5px;
@@ -312,9 +314,7 @@
 .download-button:hover {
     background-color: #30475e;
 }
-.download-button:hover {
-    background-color: #30475e;
-}
+/* Feature 1 box container */
 .Feature1 {
     border: 1px solid white;
     background-color: rgb(0, 0, 0, 0.5);
@@ -323,18 +323,19 @@
     align-items: center;
     display: flex;
 }
+/* Feature 2 box container */
 .Feature2{
     border: 1px solid white;
     background-color: rgb(0, 0, 0, 0.5);
     margin: 20px;
     font-size: 20px;
     display: flex;
-    /* animation: slideInRight 1s ease-out forwards; */
     flex-direction: row-reverse; 
     align-items: center; 
     text-align: right; 
 
 }
+/* Feature 3 box container */
 .Feature3{
     border: 1px solid white;
     background-color: rgb(0, 0, 0, 0.5);
@@ -347,25 +348,22 @@
 .gameplay {
     max-width: 50%;
     margin-right: 20px;
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInLeft 0.7s ease-out forwards, fadeIn 0.7s ease-out forwards;
 }
 .word {
     margin:20px;
     flex-grow: 1;
-    animation: slideInRight 1s ease-out forwards;
+    animation: slideInRight 0.7s ease-out forwards, fadeIn 0.7s ease-out forwards;
 }
 .gameplay2{
     max-width: 50%;
     margin-right: 20px;
-    animation: slideInRight 1s ease-out forwards;
+    animation: slideInRight 0.7s ease-out forwards, fadeIn 0.7s ease-out forwards;
 }
 .word2{
     margin:20px;
     flex-grow: 1;
-    animation: slideInLeft 1s ease-out forwards;
-}
-.word{
-
+    animation: slideInLeft 0.7s ease-out forwards, fadeIn 0.7s ease-out forwards;
 }
 
 @keyframes slideInLeft {
@@ -383,6 +381,14 @@
     }
     to {
         transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -455,11 +461,13 @@ section {
         display: block;
         float: none;
         text-align: left;
+        font-size:15px;
     }
     .Gameplay{
         padding-top: 0px;
     }
-    .word{
+    .word ,.word2{
+        text-align: center;
         font-size:15px
     }
     .main-container {
@@ -502,17 +510,5 @@ section {
         align-items: center;
     }
 
-    .gameplay,
-    .gameplay2,
-    .word {
-        text-align: center;
-        max-width: 80%;
-    }
 
-}
-@media screen and (max-width:576px) {
-    .navbar nav a{
-        font-size:16px;
-        width:15%;
-    }
 }
