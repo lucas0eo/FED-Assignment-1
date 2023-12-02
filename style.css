@@ -322,7 +322,6 @@
     font-size: 20px;
     align-items: center;
     display: flex;
-    animation: slideInLeft 1s ease-out forwards;
 }
 .Feature2{
     border: 1px solid white;
@@ -330,7 +329,7 @@
     margin: 20px;
     font-size: 20px;
     display: flex;
-    animation: slideInRight 1s ease-out forwards;
+    /* animation: slideInRight 1s ease-out forwards; */
     flex-direction: row-reverse; 
     align-items: center; 
     text-align: right; 
@@ -343,7 +342,6 @@
     font-size: 20px;
     display: flex;
     align-items: center;
-    animation: slideInLeft 1s ease-out forwards;
 
 }
 .gameplay {
@@ -354,7 +352,7 @@
 .word {
     margin:20px;
     flex-grow: 1;
-    animation: slideInLeft 1s ease-out forwards;
+    animation: slideInRight 1s ease-out forwards;
 }
 .gameplay2{
     max-width: 50%;
@@ -364,9 +362,11 @@
 .word2{
     margin:20px;
     flex-grow: 1;
-    animation: slideInRight 1s ease-out forwards;
+    animation: slideInLeft 1s ease-out forwards;
 }
+.word{
 
+}
 
 @keyframes slideInLeft {
     from {
