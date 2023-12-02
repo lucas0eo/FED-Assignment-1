@@ -14,7 +14,7 @@ Allows users to scroll and select image in the image slider
 
 
 ## Credits
-1. Content
-came with myself, the code had help from chatgpt
-2. Media
-All photos were orginal except for the profile pictures used
+1. Content -
+   The original ideas where thought of by myself, chatgpt helped to flesh out the lore of the world
+2. Media - 
+   All photos were orginal except for the profile pictures used
